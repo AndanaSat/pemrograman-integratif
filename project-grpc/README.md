@@ -20,3 +20,5 @@
   Run run.js
   
   ```node run.js```
+  
+  ## Baru di push tgl 15/06/2023 soalnya udh dipush di repo lain :v https://github.com/AndanaSat/Pemrograman-Integratif-A.git
