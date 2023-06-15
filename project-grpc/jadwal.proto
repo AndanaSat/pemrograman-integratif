@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+message Item {
+    string item_id = 1;
+    string description = 2;
+    string date = 3;
+}
+
+message GetRequest {
+    string item_id = 1;
+}
+
+message AddRequest {
+    string item_id = 1;
+    string description = 2;
+    string date = 3;
+}
+
+message UpdateRequest {
+    string item_id = 1;
+    string description = 2;
+    string date = 3;
+}
+
+message DeleteRequest {
+    string item_id = 1;
+}
+
+message Items {
+    repeated Item items = 1;
+}
+
+message Empty {}
+
+service ItemService {
+    rpc getItems (Empty) returns (Items) {}
+    rpc getItem (GetRequest) returns (Item) {}
+    rpc addItem (AddRequest) returns (Item) {}
+    rpc updateItem (UpdateRequest) returns (Item) {}
+    rpc deleteItem (DeleteRequest) returns (Item) {}
+}
